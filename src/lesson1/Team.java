@@ -2,12 +2,12 @@ package lesson1;
 
 public class Team {
    private String name;
-   private   member[] members;
+   private Member[] members;
 
     int run;
     int jump;
 
-    public Team(String name, member[] members, int run, int jump) {
+    public Team(String name, Member[] members, int run, int jump) {
         this.name = name;
         this.members = members;
         this.run = run;
@@ -22,11 +22,11 @@ public class Team {
         this.name = name;
     }
 
-    public member[] getMembers() {
+    public Member[] getMembers() {
         return members;
     }
 
-    public void setMembers(member[] members) {
+    public void setMembers(Member[] members) {
         this.members = members;
     }
 
