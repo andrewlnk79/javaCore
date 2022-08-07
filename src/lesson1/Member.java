@@ -2,36 +2,31 @@ package lesson1;
 
 public class Member {
     private String name;
-    private int run;
-    private int jump;
+    private MemberAction[] MemberActions;
 
-    public Member(String name, int run, int jump) {
+    public Member(String name, MemberAction[] memberActions) {
         this.name = name;
-        this.run = run;
-        this.jump = jump;
-    }
+        MemberActions = memberActions;
 
+    }
     public String getName() {
         return name;
     }
+    public void tryToPassObstacle(Obstacle obstacle) {
+        System.out.println(getName() + " пытается преодолеть " + obstacle.getObstacleName());
+        for (MemberAction action : memberActions) {
+            action.pass(obstacle);
+        }
 
-    public void setName(String name) {
-        this.name = name;
     }
+    public boolean isWinner(){
+        for (PlayerAction action : playerActions) {
+            if (action.getActionState() == ActionState.NONE || action.getActionState() == ActionState.DEFEAT) {
+                return false;
+            }
+        }
+        return true;
 
-    public int getRun() {
-        return run;
-    }
-
-    public void setRun(int run) {
-        this.run = run;
-    }
-
-    public int getJump() {
-        return jump;
-    }
-
-    public void setJump(int jump) {
-        this.jump = jump;
     }
 }
+
