@@ -7,7 +7,7 @@ public class Lesson2 {
 
         static String[][] arraySizeException = {{"1", "2"}, {"1", "6",}, {"9", "6"}, {"5", "6"}};
 
-        static String[][] arrayWithNoError = {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "6", "7", "8"}, {"5", "6", "7", "8"}};
+        static String[][] arrayNoError = {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "6", "7", "8"}, {"5", "6", "7", "8"}};
 
         static int sizeA = 4;
         static int sizeB = 4;
@@ -15,7 +15,7 @@ public class Lesson2 {
         public static void main(String[] args) {
 
             try {
-                System.out.println("Сумма массива: " + getSumm(arrayWithNoError));
+                System.out.println("Сумма массива: " + getSumm(arrayNoError));
             } catch (MyArraySizeException | MyArrayDataException ex){
                 System.out.println(ex.getMessage());
             }

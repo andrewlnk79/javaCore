@@ -1,7 +1,7 @@
 package Lesson2;
 
 public class MyExeption {
-    public MyException(String error){
+    public void  MyException(String error){
         super(error);
     }
 }
